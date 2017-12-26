@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of User
+ * Description of UserModel
  *
  * @author afrikannerd <afrikannerd@gmail.com>
  */
@@ -19,7 +19,7 @@ class UserModel extends Model{
         #$this->getInfo();
     }
 
-    public function getInfo()
+    public function login()
     {
         $this->sql = $this->con->prepare('SELECT * from users where uid=1');
         $this->sql->execute();
@@ -29,8 +29,5 @@ class UserModel extends Model{
         return $this->sql->fetch();
         
     }
-    public function index($data = [])
-    {
-        echo __METHOD__.' is the default action when controller '.__CLASS__.' is called without explicity stated method and params';
-    }
+    
 }

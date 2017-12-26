@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of Home
+ * Description of HomeController
  *
  * @author afrikannerd <afrikannerd@gmail.com>
  */
@@ -23,10 +23,7 @@ class HomeController extends Controller {
     
     public function index($data = [])
     {
-        echo 'default controller default action called with parameters:';
-        foreach ($data  as $key=>$value) {
-            echo $key .' : '.$value.'<br>';
-        }
+        $this->view('defaultview',['aha'=>"all that time"]);
     }
     
     public function profile($data = [])

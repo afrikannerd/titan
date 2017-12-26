@@ -38,12 +38,8 @@ class Database extends PDO{
     
     public function __destruct() {
         $this->link = null;
-        echo 'DB Closed';
+       
     }
 
-    public function segregate()
-    {
-        echo 'hdhfdfc';
-    }
     
 }

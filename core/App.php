@@ -13,9 +13,12 @@
  */
 class App {
     //put your code here
+    /*
     protected $controller = 'HomeController';
     protected $action = 'index';
     protected $params = [];
+     * 
+     */
     
     public function __construct() {
         /*
@@ -26,28 +29,19 @@ class App {
         
         $url = isset($_GET['url'])?explode('/',rtrim($_GET['url'], '/')):null;
         
-        if(isset($url[0]) && class_exists(ucfirst($url[0]).'Controller'))
-        {
-            $this->controller = ucfirst($url[0]).'Controller';
-            unset($url[0]);
-        } else 
-        {
-            unset($url[0]);
-        }
+        $controller = \Route::setController(ucfirst($url[0]).'Controller');
         
-        if(isset($url[1]) && method_exists($this->controller, $url[1]))
-        {
-            
-            $this->action = $url[1];
-            unset($url[1]);
-        } else 
-        {
-            unset($url[1]);
-        }
-        $this->params = isset($url)?array_values($url):[];
-        $controller = new $this->controller;
+        unset($url[0]);
         
-        $controller->{$this->action}($this->params);
+        $action = \Route::setAction($controller, $url[1]);
+        
+        unset($url[1]);
+        
+        $params = \Route::setParam($url);
+        
+        $control = new $controller;
+        
+        $control->{$action}($params);
         
         
         #new HomeController();

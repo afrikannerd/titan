@@ -1,3 +1,9 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta http-equiv="refresh" content="20" />
+    </head>
+    <body>
 <?php
 
 /* 
@@ -5,8 +11,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
+
 $GLOBALS['database'] = array(
     'driver' => 'mysql',
     'host' => 'localhost',

@@ -13,13 +13,14 @@
  */
 class UserController extends Controller{
     
-    public function index($args = [])
-    { 
-        
-            echo "arg  is :<br>";
+    public function index($data = [])
+    {
+        echo __METHOD__.' is the default action when controller '.__CLASS__.' is called without explicity stated method and params';
     }
     public function login()
     {
+        $data = $this->model("UserModel")->login();
         
+        $this->view('home/indexview', $data);
     }
 }

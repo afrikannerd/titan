@@ -30,7 +30,7 @@ function LoadFile($file)
         foreach($value as $newdir) {
         $files = new RecursiveDirectoryIterator('..'.DS.$newdir);
         $files->setFlags(FilesystemIterator::SKIP_DOTS | FilesystemIterator::UNIX_PATHS);
-        $files = new RecursiveIteratorIterator($files,RecursiveIteratorIterator::SELF_FIRST );
+        $files = new RecursiveIteratorIterator($files,RecursiveIteratorIterator::LEAVES_ONLY );
 
         foreach ($files as $key => $val) {
             if($val->isFile()){
@@ -46,7 +46,7 @@ function LoadFile($file)
     }
     catch(\Exception $e)
     {
-        echo $e->getTraceAsString();
+        
     }
 
         }

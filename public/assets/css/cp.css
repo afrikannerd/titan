@@ -1,0 +1,152 @@
+/*
+	 BOOTSTRAP STYLES CUSTOMIZATION
+*/
+ul{
+	margin-bottom: 0 !important;
+}
+li a{
+	display: block !important;
+	width: inherit;
+	padding: 10px 15px;
+}
+a{
+	text-decoration: none !important;
+}
+.container,.container-fixed{
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.row{
+	margin: 0 ;
+
+}
+.navbar{
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.add-products .form-control{
+	
+	border:none;
+	border-radius: 0
+}
+
+.add-products{
+	color: #ffffff;
+}
+.add-products .input-group-addon{
+	border: none;
+	border-radius: 0;
+	color: #777;
+}
+.input-group-addon{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.panel,.panel-group .panel{
+	border-radius: 0;
+}
+.in .list-group{
+	color: #777;
+	left: 20px;
+}
+
+.panel-default > .panel-heading{
+	background: #424c53;
+	color: #fff;
+}
+.panel-heading{
+	border-radius: 0;
+	padding: 0;
+}
+
+.panel-title a{
+	display: block !important;
+	width: inherit;
+	padding: 10px 15px;
+}
+.panel-group{
+	margin-bottom: 5px;
+}
+
+.list-group-item{
+	padding: 0;
+}
+/*
+	END OF  BOOTSTRAP STYLES CUSTOMIZATION
+*/
+.navbar-nav li:hover:not(.active){
+
+    background-color: #555;
+    color: #ffffff !important;
+
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #fff;
+   
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+}
+
+td label{
+	width: 100%;
+	height: 100%;
+}
+.wrapper{
+	height: 100%;
+ 	position: relative;
+
+}
+.left-panel{
+	padding-top: 10px;
+	max-width: 206px;
+	min-height: 45em ;
+	border-right: 1px solid #eee;
+	background: #424c53;
+	color: #fff;
+	position: fixed;
+	top: 51px;
+}
+
+.right-panel{
+	background: #eef1f8;
+	min-height: 45em ;
+	
+	position: absolute;
+	top: 51px;
+	margin-left: 206px;
+	padding-top: 10px
+}
+
+.add-products{
+	width: 98%;
+	padding: 1%;
+	margin: 1%;
+	background: #020f2c;
+	height: 100%;
+}
+
+select[multiple]{
+	
+	height: 34px !important;
+}
+
+.prod-description{
+	margin: 10px 0 0 15px;
+	width: 250px;
+	height: 150px;
+	border: none;
+	color: #aaa;
+}
+
+#snap{
+	margin-top: 10px;
+
+}
