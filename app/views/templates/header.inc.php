@@ -41,7 +41,7 @@ and open the template in the editor.
         <meta name="description" content="This is an ecommerce website">
         <meta name="keywords" content="Fashion Nova,Fashion">
 
-        <title><?php echo $data['aha']; ?></title>
+        <title><?php echo $title; ?></title>
 
     </head>
 

@@ -5,7 +5,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+$title = 'Home';
 require_once '../app/views/templates/header.inc.php';
 ?>
 You are Home. click <a href="user/login">Here</a> to get started

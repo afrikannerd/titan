@@ -33,7 +33,8 @@ class App {
         
         unset($url[0]);
         
-        $action = \Route::setAction($controller, $url[1]);
+        
+        $action = \Route::setAction($controller, isset($url[1]));
         
         unset($url[1]);
         
@@ -41,7 +42,7 @@ class App {
         
         $control = new $controller;
         
-        $control->{$action}($params);
+        $control->{$action}($params = []);
         
         
         #new HomeController();

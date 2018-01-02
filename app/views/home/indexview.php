@@ -1,4 +1,5 @@
 <?php
+$title = "Default";
 require_once '../app/views/templates/header.inc.php';
 echo $data->name;
 require_once '../app/views/templates/footer.inc.php';

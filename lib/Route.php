@@ -14,8 +14,9 @@
 class Route {
     protected static $controller = 'HomeController';
     protected static $action = 'index';
+    
     protected static $params = [];
-    public static function setController($controller)
+    public static function setController($controller):string
     {
          if(file_exists('../app/controllers/'.$controller.'.php'))
         {
@@ -25,7 +26,7 @@ class Route {
         return self::$controller;
     }
     
-    public static function setAction($controller,$action)
+    public static function setAction($controller,$action):string
     {
         if(method_exists($controller, $action))
         {

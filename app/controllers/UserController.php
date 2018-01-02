@@ -21,6 +21,11 @@ class UserController extends Controller{
     {
         $data = $this->model("UserModel")->login();
         
-        $this->view('home/indexview', $data);
+        $this->view('user/loginview', $data);
+    }
+    
+    public function error()
+    {
+        $this->view('errorview');
     }
 }
